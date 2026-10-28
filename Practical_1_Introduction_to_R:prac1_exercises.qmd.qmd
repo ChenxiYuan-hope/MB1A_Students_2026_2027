@@ -1,0 +1,53 @@
+---
+title: "Practical_1_Introduction_to_R/prac1_exercises.qmd"
+author: "Hope"
+---
+
+```{r}
+sqrt(9)
+round(3.14159)
+round(3.14159, digit= 2)
+print(seq(1,10,2))
+print(seq(5,15,5))
+print(seq(from = 1, to = 10, by = 2))
+print(rep(5,7))
+x <- "why don't you respond"
+print(class(x))
+y <- 947.374
+print(y)
+print(class(y))
+z <- FALSE
+print(class(z))
+
+cell_id_1 <- "CX1"
+cell_id_2 <- "CX2"
+treated_1 <- TRUE
+treated_2 <- FALSE
+num_of_cell_before_1 <- 5415
+num_of_cell_before_2 <- 8123
+num_of_cell_after_1 <- 1432
+num_of_cell_after_2 <- 7543
+
+```
+
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this 
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
