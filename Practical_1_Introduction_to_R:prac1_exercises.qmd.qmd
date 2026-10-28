@@ -28,6 +28,31 @@ num_of_cell_before_2 <- 8123
 num_of_cell_after_1 <- 1432
 num_of_cell_after_2 <- 7543
 
+install.packages("fortunes")
+library(fortunes)
+install.packages("tidyverse")
+library(tidyverse)
+install.packages("gt")
+library(gt)
+
+Cell_id <- c(cell_id_1, cell_id_2)
+Treated <- c(treated_1, treated_2)
+n_before <- c(num_of_cell_before_1, num_of_cell_before_2)
+n_after <- c(num_of_cell_after_1, num_of_cell_after_2)
+print(cell_id)
+
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+print(all_my_pets [4])
+
+
+df <- tibble(
+  cell_ID = c("CX1", "CX2"),
+  treated = c(TRUE, FALSE),
+  num_of_cells_before = c(5415, 8123),
+  num_of_cells_after = c(1432, 7543)
+)
+gt(df)
+
 ```
 
 
@@ -51,3 +76,8 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+```{r}
+weather <- read_csv("data/weather_data.csv")
+gt(weather)
+```
+
