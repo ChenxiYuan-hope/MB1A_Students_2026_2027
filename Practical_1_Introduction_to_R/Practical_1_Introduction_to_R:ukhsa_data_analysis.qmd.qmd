@@ -9,9 +9,48 @@ install.packages("fortunes")
 library(tidyverse)
 library(gt)
 
-antibiotics <- read_csv("data/ukhsa-chart-download-rhinovirus.csv")
+rhinovirus <- read_csv("data/ukhsa-chart-download-rhinovirus.csv")
 
 gt(head(rhinovirus))
+```
+
+```{r}
+weather <- read_csv("data/weather_data.csv")
+ggplot(weather)
+ggplot(weather, aes(
+  x = observation_time,
+  y = temperature_c
+))
+ggplot(weather, aes(
+  x = observation_time,
+  y = temperature_c
+)) +
+  geom_line()
+ggplot(weather, aes(
+  x = observation_time,
+  y = temperature_c
+)) +
+  geom_line(colour = "red") +
+  xlab("Date") +
+  ylab("Temp (C)") +
+  ggtitle("Temperature by Date")
+```
+
+```{r}
+library(tidyverse)
+library(gt)
+
+antibiotics <- read_csv("data/ukhsa-chart-antibiotics.csv")
+ggplot(antibiotics)
+ggplot(antibiotics, aes(
+  x = date,
+  y = metric_value
+)) + 
+  geom_line(colour = "purple") +
+  xlab("Year") +
+  ylab("Standard consumption (DID)") +
+  ggtitle("Standard consumption by year")
+
 ```
 
 ## Quarto
